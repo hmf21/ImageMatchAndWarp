@@ -560,6 +560,7 @@ def single_test_img_patch_warp():
 
 def main():
     # dataset_test_img_patch_warp()
+    # 对于匹配对验证的工作需要增加使用，修改代码的模块化程度
     single_test_img_patch_warp()
 
 
