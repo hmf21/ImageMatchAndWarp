@@ -516,8 +516,8 @@ def dataset_test_img_patch_warp():
 
 
 def single_test_img_patch_warp():
-    path_to_save = '../singlee_test/result_resource/'
-    img_path_list = glob.glob('../singlee_test/image_resource/*.jpg')
+    path_to_save = '../single_test/result_resource/'
+    img_path_list = glob.glob('../single_test/image_resource/*.jpg')
     img1_fname, img2_fname = img_path_list[0], img_path_list[1]
     img1 = cv2.imread(img1_fname)
     img2 = cv2.imread(img2_fname)
