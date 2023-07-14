@@ -284,8 +284,8 @@ def test_superpoint_single_match(img1_path, img2_path, idx=0, save_path=None):
     # 待查询的图像路径
     image_1 = cv2.imread(img1_path, 0)
     image_1_color = cv2.imread(img1_path)
-    image_1 = cv2.resize(image_1, (500, 400), interpolation=interp)
-    image_1_color = cv2.resize(image_1_color, (500, 400), interpolation=interp)
+    image_1 = cv2.resize(image_1, (500, 500), interpolation=interp)
+    image_1_color = cv2.resize(image_1_color, (500, 500), interpolation=interp)
     image_1 = (image_1.astype('float32') / 255.)
     img_h, img_w = image_1.shape
     pts1, image_1_descriptors, heatmap1 = fe.run(image_1)
@@ -297,8 +297,8 @@ def test_superpoint_single_match(img1_path, img2_path, idx=0, save_path=None):
 
     image_2 = cv2.imread(img2_path, 0)
     image_2_color = cv2.imread(img2_path)
-    image_2 = cv2.resize(image_2, (500, 400), interpolation=interp)
-    image_2_color = cv2.resize(image_2_color, (500, 400), interpolation=interp)
+    image_2 = cv2.resize(image_2, (500, 500), interpolation=interp)
+    image_2_color = cv2.resize(image_2_color, (500, 500), interpolation=interp)
     image_2 = (image_2.astype('float32') / 255.)
     pts2, image_2_descriptors, heatmap2 = fe.run(image_2)
     time_check_2 = time.time()
@@ -516,8 +516,8 @@ def dataset_test_img_patch_warp():
 
 
 def single_test_img_patch_warp():
-    path_to_save = '../single_test/result_resource/'
-    img_path_list = glob.glob('../single_test/image_resource/*.jpg')
+    path_to_save = 'E:\\Datasets\\VLD\\SampleImages\\University1652\\sample1\\'
+    img_path_list = glob.glob('E:\\Datasets\\VLD\\SampleImages\\University1652\\sample1\\*')
     img1_fname, img2_fname = img_path_list[0], img_path_list[1]
     img1 = cv2.imread(img1_fname)
     img2 = cv2.imread(img2_fname)
